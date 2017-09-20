@@ -20,7 +20,7 @@ from Github import views as GithubViews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^sessions/', GithubViews.SessionsView.as_view()),
-    url(r'^github/', GithubViews.GeneralView.as_view()),
+    url(r'^api/sessions/', GithubViews.SessionsView.as_view()),
+    url(r'^api/github/', GithubViews.GeneralView.as_view()),
 
 ]

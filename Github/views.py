@@ -5,7 +5,7 @@ import simplejson
 from django.shortcuts import render
 
 # Create your views here.
-from requests import Response
+from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from CodeClubBackend.utils import createResponse
@@ -13,7 +13,7 @@ from Github.utils import get_session_info
 
 
 class GeneralView(APIView):
-    def get(self,request,url):
+    def get(self,request):
         url = request.build_absolute_uri()
         url = url[url.index("github/")+len("github/"):]
         print('https://api.github.com/' + url)
